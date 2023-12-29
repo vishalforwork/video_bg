@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>video demo</title>
+</head>
+
+<body>
+    <div class="container">
+        <video id="clip" src="./assets/video.mp4"></video>
+        <h1>the video is playing in the background</h1><br/><br/>
+        <button id="button" onclick="playPauseVid()" type="button">Play/Pause</button>
+    </div>
+    
+    <script>
+        const vid = document.getElementById("clip");
+        let count = 1;
+        function playPauseVid() {
+            if (count%2!=0) {
+                vid.play();
+                count++
+            }
+            else{
+                vid.pause();
+                count++
+            }
+        }
+    </script>
+</body>
+
+</html>
